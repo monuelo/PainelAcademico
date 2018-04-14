@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="./assets/img/apple-icon.png">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <title>
+        Painel Acadêmico
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/material-dashboard.css?v=2.0.0">
+    <!-- Documentation extras -->
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/assets-for-demo/demo.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+            <div class="logo">
+                <a href="index.html" class="simple-text logo-normal">
+                    Painel Acadêmico
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">
+                            <i class="material-icons">dashboard</i>
+                            <p>Principal</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./horarios.html">
+                            <i class="material-icons">content_paste</i>
+                            <p>Horários</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./user.html">
+                            <i class="fa fa-github"></i>
+                            <p>GitHub</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand">GitHub</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-header card-header-warning card-header-icon">
+                                            <div class="card-icon">
+                                                <i class="fa fa-users"></i>
+                                            </div>
+                                            <p class="card-category">Followers</p>
+                                            <h3 class="card-title" id="followers"></h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="stats"> Seguidores
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-header card-header-success card-header-icon">
+                                            <div class="card-icon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <p class="card-category">Following</p>
+                                            <h3 class="card-title" id="following">
+                                            </h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="stats">
+                                                Seguindo
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-header card-header-danger card-header-icon">
+                                            <div class="card-icon">
+                                                <i class="fa fa-database"></i>
+                                            </div>
+                                            <p class="card-category">Public Repos</p>
+                                            <h3 class="card-title" id="repos"></h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="stats">Repositórios Públicos
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-header card-header-info card-header-icon">
+                                            <div class="card-icon">
+                                                <i class="fa fa-building"></i>
+                                            </div>
+                                            <p class="card-category">Company</p>
+                                            <h6 class="category card-title" id="company">
+                                            </h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="stats">
+                                                Corporação
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-profile">
+                                <div class="card-avatar" id="avatar">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-category text-gray text-lowercase" id="username"></h6>
+                                    <h4 class="card-title" id="name"></h4>
+                                    <p class="card-description" id="bio">
+                                    </p>
+                                    <a href="http://github.com/hericlesme" class="btn btn-primary btn-round">Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer ">
+                <div class="container-fluid">
+                    <div class="copyright pull-right">
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, Héricles Emanuel
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "https://api.github.com/users/hericlesme",
+            data: {
+                client_id: "5b8e9e5d024b57fdf380",
+                client_secret: "c51fd343f72887e614d63622377d178d9d04c6a1"
+            }
+        }).done(function (user) {
+            $("#avatar").html(`
+        <img class="thumbnail avatar" src="${user.avatar_url}">
+        `);
+            $('#followers').html(user.followers);
+            $('#following').html(user.following);
+            $('#repos').html(user.public_repos);
+            $('#company').html(user.company);
+            $('#bio').html(user.bio);
+            $('#name').html(user.name);
+            $('#username').html(`@${user.login}`);
+        });
+    });
+</script>
+<!--   Core JS Files   -->
+<script src="./assets/js/core/jquery.min.js"></script>
+<script src="./assets/js/core/popper.min.js"></script>
+<script src="./assets/js/bootstrap-material-design.js"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+<script src="./assets/js/plugins/chartist.min.js"></script>
+<!-- Library for adding dinamically elements -->
+<script src="./assets/js/plugins/arrive.min.js" type="text/javascript"></script>
+<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
+<script src="./assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
+<script src="./assets/js/material-dashboard.js?v=2.0.0"></script>
+<!-- demo init -->
+<script src="./assets/js/plugins/demo.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>
